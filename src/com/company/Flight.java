@@ -46,7 +46,14 @@ public class Flight {
         this.capacity = capacity;
         this.bookedSeats = bookedSeats;
     }
-    public Flight(){ }
+    public String flightDetails(){
+        return String.format("This flight no is %s of airline %s with " +
+                "capacity %d and booked seats %d",flightNumber,airline,capacity,bookedSeats);
+    }
+    public boolean checkAvailability(){
+        if (this.bookedSeats<this.capacity) return true;
+        else return false;
+    }
 
 
 
